@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "ff6ad0db-5b4e-4ff5-b793-19b75fd6d574",
+		"name": "talkback",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"digiapt\",\n\t\"password\":\"digiapt\"\n}"
+				},
+				"url": "{{baseUrl}}/admin/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Admin logout",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": "gxi3di50k8emk"
+					}
+				],
+				"body": {},
+				"url": "{{baseUrl}}/admin/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "Team login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"digiapt\",\n\t\"password\":\"digiapt\"\n}"
+				},
+				"url": "{{baseUrl}}/team/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Team logout",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": " wujlgrlytpdt"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "{{baseUrl}}/team/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "Add team",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"digiapt\",\n\t\"password\":\"digiapt\",\n\t\"number_of_people\":7,\n\t\"validity\":7\n}"
+				},
+				"url": "{{baseUrl}}/team/add"
+			},
+			"response": []
+		},
+		{
+			"name": "Get team",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": "{{baseUrl}}/team/details/maddy"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete team",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": "{{baseUrl}}/team/delete/maddy"
+			},
+			"response": []
+		},
+		{
+			"name": "Update team",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number_of_people\":5,\n\t\"validity\":6\n}"
+				},
+				"url": "{{baseUrl}}/team/update/maddy"
+			},
+			"response": []
+		},
+		{
+			"name": "Get validity",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": "xrshx9wv8v68 "
+					}
+				],
+				"body": {},
+				"url": "{{baseUrl}}/team/validity"
+			},
+			"response": []
+		}
+	]
+}
