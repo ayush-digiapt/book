@@ -11,7 +11,7 @@ var CryptoJS = require('crypto-js');
 global.lib = require('./lib');
 
 // var adminRouter = require('./routes/admin.server.routes');
-// var teamRouter = require('./routes/team.server.routes');
+var homepageRouter = require('./routes/index');
  var bookRouter = require('./routes/books.server.routes');
 
 // CORS Enable
@@ -38,6 +38,7 @@ app.use(cookieParser());
 
 // app.use('/admin', adminRouter);
 // app.use('/team', teamRouter);
+app.use('/homepage', homepageRouter);
 app.use('/book', bookRouter);
 
 

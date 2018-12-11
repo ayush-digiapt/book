@@ -12,7 +12,11 @@ var upload = multer(); // for parsing multipart/form-data
 // router.post('/', upload.array(), /*auth.isAuthenticated,*/ Book.createBook);
 
 /*Get single books*/
-router.get('/:books_id' , Book.getBook);
+router.get('/:book_id' , Book.getBook);
+
+
+/*Get single books*/
+router.post('/add' , Book.addBook);
 
 // /*Get all Books.*/
 // router.get('/' , Book.getAllBooks);

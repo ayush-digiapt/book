@@ -2,11 +2,11 @@ module.exports = {
     environment: 'development',
     port: 3000,
     db: {
-        database: 'talkback',
+        database: 'book',
         host: 'localhost',
         port: 3306,
-        user: 'talkback',
-        password: 'talkback'
+        user: 'root',
+        password: 'root'
     },
     mysql_date_format: 'YYYY-MM-DD HH:MM:SS',
     sequelize: {

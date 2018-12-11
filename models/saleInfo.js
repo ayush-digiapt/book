@@ -17,9 +17,8 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     isEbook: {
-      type: DataTypes.INTEGER(1),
-      allowNull: false,
-      defaultValue: '0'
+      type: DataTypes.STRING(32),
+      allowNull: false
     },
     lid: {
       type: DataTypes.INTEGER(4),

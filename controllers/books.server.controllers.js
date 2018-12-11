@@ -17,25 +17,186 @@ var BookHelper=require("../service/bookhelper");
 
 exports.getBook = lib.asyncMiddleware(async(req, res, next) => {
     console.log("Inside demo API\n");
-    var token= req.params.id;
+    var book_id= req.params.book_id;
     try {
         /*Async await*/
        
-        data = await BookHelper.getPersonName(id);
+        bookData = await BookHelper.getBookdetails(book_id);
        
-        console.log("data is"+data);
-        if(data===0)
+        console.log("data is"+bookData);
+        if(bookData!=null)
         {
-            res.status(204).send({status:204, message:"no data"})
+            bid=bookData.id;
+            console.log(bid);
+            imageLinkData = await BookHelper.getimageLinkdetails(bid);
+           // return res.status(200).send({status:200, message:"data"});
+
+           if(imageLinkData!=null){
+             var smallThumbnail= imageLinkData.smallThumbnail;
+             var thumbnail= imageLinkData.thumbnail;
+             console.log(smallThumbnail);
+             console.log(thumbnail);
+
+           listPriceData= await BookHelper.getlistPricedetails(bid);
+
+            if(listPriceData!=null){
+                lid=listPriceData.id;
+                listPrice=listPriceData.ammount;
+                listCurrency_code=listPriceData.currency_code;
+
+                console.log(lid);
+                console.log(listPrice);
+                console.log(listCurrency_code);
+
+                retailPriceData= await BookHelper.getretailPriceData(bid);
+                if(retailPriceData!=null){
+                    rid=retailPriceData.id;
+                    retailPrice=retailPriceData.ammount;
+                    retailCurrency_code=retailPriceData.currency_code;
+
+                    console.log(rid);
+                    console.log(retailPrice);
+                    console.log(retailCurrency_code);
+                    saleInfoData= await BookHelper.getsaleInfo(bid,lid,rid);
+
+                    if(saleInfoData!=null){
+                         var saleability = saleInfoData.saleability;
+                         console.log(saleability);
+                         usersData= await BookHelper.getusersData(bid);
+                         
+                         if(usersData!=null){
+                             var authors =usersData.authors;
+                             var publisher= usersData.publisher;
+
+                             console.log(authors);
+                             console.log(publisher);
+
+                             return res.status(200).send({status:200, authors:authors, publisher:publisher,listPrice:listPrice+listCurrency_code, retailPrice:retailPrice+retailCurrency_code, saleability:saleability , smallThumbnail:smallThumbnail, thumbnail:thumbnail});                      
+                         }
+                         else{
+                            return res.status(204).send({status:204, message:"no data"});
+                         }
+                    }
+                    else{
+                        return res.status(204).send({status:204, message:"no data"});
+                    }
+                }
+                else{
+                    return res.status(204).send({status:204, message:"no data"});
+                }
+                
+            }
+            else{
+                return res.status(204).send({status:204, message:"no data"});
+            }
+           }
+           else{
+            return res.status(204).send({status:204, message:"no data"});
+           }
+           
         }
         else{
-        return res.status(200).send({status:200, message:"data"});
+           return res.status(204).send({status:204, message:"no data"});
         }
     } catch (err) {
         console.log("Error\t", err);
         return res.status(400).send("Server Error");
     }
 });
+
+
+
+
+
+exports.addBook = lib.asyncMiddleware(async(req, res, next) => {
+    console.log("Inside demo API\n");
+    //var book_id= req.params.book_id;
+    try {
+        /*Async await*/
+        var book_id=req.body.book_id;
+        var title=req.body.title;
+        var description=req.body.description;
+        var smallThumbnail= req.body.smallThumbnail;
+        var thumbnail= req.body.thumbnail;
+        var smallThumbnail= req.body.smallThumbnail;
+        var thumbnail= req.body.thumbnail;
+        var list_ammount= req.body.list_ammount;
+        var list_currency_code= req.body.list_currency_code;
+        var retail_ammount= req.body.retail_ammount;
+        var retail_currency_code= req.body.retail_currency_code;
+        var country = req.body.country;
+        var saleability = req.body.saleability;
+        var isEbook = req.body.isEbook;
+        var authors =  req.body.authors;
+        var publisher  = req.body.publisher;
+
+
+       
+        addBookData = await BookHelper.addBookDetails(book_id,title,description);
+        if(addBookData!=0)
+        {
+            bid=addBookData.id;
+            console.log(bid);
+           addImageLinkData = await BookHelper.addImageLinkdetails(smallThumbnail,thumbnail,bid);
+          if(addImageLinkData!=0){
+            console.log("inside addImageLinkData ");
+           
+            addListPriceData = await BookHelper.addListPricedetails(list_ammount,list_currency_code,bid);
+           
+            if(addListPriceData!=0){
+                lid= addListPriceData.id;
+                console.log(lid);
+                console.log("inside addListPricedetails ");
+
+                addRetailPriceData = await BookHelper.addRetailPricedetails(retail_ammount,retail_currency_code,bid);
+                
+                if(addRetailPriceData!=0){
+                    rid= addRetailPriceData.id;
+                    console.log(rid);
+                    console.log("inside addRetailPriceData ");
+
+                    addSaleInfoData = await BookHelper.addSaleInfodetails(country,saleability,isEbook,lid,rid,bid);
+
+                    if(addSaleInfoData!=0){
+                        console.log("inside addRetailPriceData ");
+
+                        addUsersData = await BookHelper.addUsersdetails(authors,publisher,bid);
+                        if(addUsersData!=0){
+                            console.log("inside addUsersData ");
+                            return res.status(200).send({status:200, message:"data added"});
+                        }
+                        else{
+                            return res.status(204).send({status:204, message:"data not added"});
+                        }
+                    }
+                    else{
+                        return res.status(204).send({status:204, message:"data not added"});
+                     }
+                
+                }
+                else{
+                    return res.status(204).send({status:204, message:"data not added"});
+                 }
+            }
+            else{
+                return res.status(204).send({status:204, message:"data not added"});
+             }
+
+          }
+          else{
+            return res.status(204).send({status:204, message:"data not added"});
+         }
+
+        }
+           else{
+            return res.status(204).send({status:204, message:"data not added"});
+         }
+     } catch (err) {
+         console.log("Error\t", err);
+         return res.status(400).send("book_id already inserted" );
+     }
+ });
+
 /*
  ** Beans generated CRR*UD controller methods.
  */
