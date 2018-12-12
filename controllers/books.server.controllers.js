@@ -197,6 +197,51 @@ exports.addBook = lib.asyncMiddleware(async(req, res, next) => {
      }
  });
 
+
+exports.bulkCreate = lib.asyncMiddleware(async(req, res, next) => {
+    console.log("Inside demo API\n");
+    var book_id1=req.body.book_id1;
+    var title1=req.body.title1;
+    var description1=req.body.description1;
+    var book_id2=req.body.book_id2;
+    var title2=req.body.title2;
+    var description2=req.body.description2;
+    var book_id3=req.body.book_id3;
+    var title3=req.body.title3;
+    var description3=req.body.description3;
+    console.log(book_id1);
+    console.log(title1);
+    console.log(description1);
+    console.log(book_id2);
+    console.log(title2);
+    console.log(description2);
+    console.log(book_id3);
+    console.log(title3);
+    console.log(description3);
+   
+    try {
+        /*Async await*/
+       
+        bulkData = await BookHelper.addBulkCreate(book_id1,title1,description1,book_id2,title2,description2,book_id3,title3,description3);
+       
+        console.log("data is"+bulkData);
+        if(bulkData!=null)
+        {
+            bid=bulkData.id;
+            console.log(bid);
+           // imageLinkData = await BookHelper.getimageLinkdetails(bid);
+            return res.status(200).send({status:200, message:bulkData});
+        }
+        else{
+         return res.status(204).send({status:204, message:"data not added"});
+      }
+  } catch (err) {
+      console.log("Error\t", err);
+      return res.status(400).send("book_id already inserted" );
+  }
+});
+
+
 /*
  ** Beans generated CRR*UD controller methods.
  */

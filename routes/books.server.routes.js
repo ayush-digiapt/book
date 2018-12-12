@@ -18,8 +18,8 @@ router.get('/:book_id' , Book.getBook);
 /*Get single books*/
 router.post('/add' , Book.addBook);
 
-// /*Get all Books.*/
-// router.get('/' , Book.getAllBooks);
+/*Get all Books.*/
+router.post('/bulk' , Book.bulkCreate);
 
 // /*Update an books record*/
 // router.post('/:books_id', upload.array(), /*auth.isAuthenticated,*/ Book.updateBook);

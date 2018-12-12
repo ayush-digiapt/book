@@ -342,6 +342,33 @@ exports.addUsersdetails = async function(authors,publisher,bid) {
 
 
 
+exports.addBulkCreate = async function(book_id1,title1,description1,book_id2,title2,description2,book_id3,title3,description3) {
+
+   
+    return new Promise((resolve,reject) => {
+    Book.bulkCreate([
+        {book_id: book_id1, title: title1, description: description1},
+            {book_id: book_id2, title: title2, description: description2},
+            {book_id: book_id3, title: title3, description: description3}
+      ]) 
+                
+        .then(function(addBulkCreate) {
+           
+            console.log("data is****");
+           
+            resolve(addBulkCreate);
+        
+        }).catch(function(err) {
+            console.log("data is######");
+            
+            reject(err);
+        })
+    })
+
+}
+
+
+
 
 
 
