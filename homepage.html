@@ -18,20 +18,20 @@
 
 <script>
 
-  function main(Book) {
-    console.log(Book);
+ function main(Book) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-       //document.getElementById("demo").innerHTML = this.responseText;
-        //-  if (this.readyState == 4 && this.status == 200) {
-        //-      alert(this.responseText);
+         if (this.readyState == 4 && this.status == 200) {
+            // window.location(this.responseText);
+            console.log(this.responseText);
+          window.open(this.responseText);
+            
          }
-    
-    xhttp.open("GET", "localhost:3000/book/"+Book+"", true);
-    //- xhttp.setRequestHeader("Content-type", "application/json");
-    //- xhttp.send("Your JSON Data Here");
-    xhttp.send();
-}   
+    };
+    xhttp.open("GET", "http://localhost:3000/book/"+Book, true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send("Your JSON Data Here");
+}
  </script>
     </head>
 <body>
@@ -46,8 +46,8 @@
 
   <td>   
 <form action="">
-  Book_id:
-  <input type="text" name="Book" id="Book" value="" onclick="">
+  Book:
+  <input type="text" name="Book" id="Book" value="" >
 
  
   <br><br>

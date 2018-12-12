@@ -1,5 +1,17 @@
-extends layout
+//- extends layout
 
-block content
-  h1= title
-  p Welcome to #{title}
+//- block content
+//-   h1= title
+//-   p Welcome to #{title}
+
+
+body
+  form(action='', method='POST')
+    p
+      | Book: 
+      input(type='text', name='Book', value='')
+      |         
+      |         
+     
+    input(type='button', value='search')
+
