@@ -8,10 +8,10 @@ var request = require('request');
 var waterfall = require('async-waterfall');
 var messages = require('../config/messages');
 var db = require('../db/db');
+var BookHelper=require("../service/bookhelper");
 
 // var Book = db.import('../models/books');
 
-//var BookHelper=require("../service/bookhelper");
 
 
 
@@ -20,27 +20,21 @@ exports.getBook = lib.asyncMiddleware(async(req, res, next) => {
     var book= req.params.book;
     try {
         /*Async await*/
-       
-        var bookData =  "www.googleapis.com/books/v1/volumes?q="+book+""
-       
-        console.log("data is"+bookData);
-        if(bookData.length>0)
-        {
-           // console.log(bookdata);
-         //  res.render(bookData);
-       return res.status(200).send(bookData);
-
-           
-        }
-        else{
-           return res.status(204).send({status:204, message:"no data"});
-        }
+        var url =  "https://www.googleapis.com/books/v1/volumes?q="+book+""
+        var data=await BookHelper.callGoogleBookApi(url);
+        var bookdata=[];
+        for(let i=0;i<10;i++){
+            bookdata.push(data.items[i]);
+        }   
+        await BookHelper.populateData(bookdata);
+        return res.status(200).send({
+            messages:"ok"
+        })
     } catch (err) {
         console.log("Error\t", err);
-        return res.status(400).send("Server Error");
+        return res.status(500).send("Server Error");
     }
 });
-
 
 
 

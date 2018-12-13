@@ -39,12 +39,12 @@ npm install
 #!shell  10.235.64.129
 
 mysql -utalkback root -ptalkback
-create user 'talkback'@'localhost' identified by 'talkback';
+create user 'book'@'localhost' identified by 'book';
 drop database talkback;
 create database talkback;
 grant all privileges on talkback.* to 'talkback'@'localhost' with grant option;
 exit;
-mysql -u talkback -ptalkback talkback < db/schema.sql;
+mysql -u book -pbook book < db/schema.sql;
 
 mysql -u talkback -ptalkback talkback < db/mock.sql
 
@@ -55,7 +55,7 @@ mysql -u talkback -ptalkback talkback < db/mock.sql
 ```
 #!shell
 
-sequelize-auto -o "./models" -d talkback -h localhost -u talkback -p 3306 -x talkback -e mysql
+sequelize-auto -o "./models" -d book -h localhost -u book -p 3306 -x book -e mysql
 
 ```
 

@@ -1,0 +1,772 @@
+{
+ "kind": "books#volumes",
+ "totalItems": 4510,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "4WwdMJKXzhEC",
+   "etag": "SkGxHb6TKwU",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/4WwdMJKXzhEC",
+   "volumeInfo": {
+    "title": "The Book",
+    "subtitle": "The Life Story of a Technology",
+    "authors": [
+     "Nicole Howard"
+    ],
+    "publisher": "Greenwood Publishing Group",
+    "publishedDate": "2005",
+    "description": "Introduces the history of the book, beginning with papyrus in ancient Egypt, through the development of the printing press, to current computer-based technologies, including its influence on societies and cultures around the world.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "031333028X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780313330285"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 171,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 2,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.0.2.0.preview.3",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=4WwdMJKXzhEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=4WwdMJKXzhEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.co.in/books?id=4WwdMJKXzhEC&printsec=frontcover&dq=book&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.co.in/books?id=4WwdMJKXzhEC&dq=book&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/The_Book.html?hl=&id=4WwdMJKXzhEC"
+   },
+   "saleInfo": {
+    "country": "IN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "IN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.co.in/books/download/The_Book-sample-epub.acsm?id=4WwdMJKXzhEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.co.in/books/download/The_Book-sample-pdf.acsm?id=4WwdMJKXzhEC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=4WwdMJKXzhEC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Introduces the history of the book, beginning with papyrus in ancient Egypt, through the development of the printing press, to current computer-based technologies, including its influence on societies and cultures around the world."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "7F5aAAAAIAAJ",
+   "etag": "gglMx9Q6aTM",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/7F5aAAAAIAAJ",
+   "volumeInfo": {
+    "title": "The Republic of India",
+    "subtitle": "the development of its laws and constitution",
+    "authors": [
+     "Alan Gledhill"
+    ],
+    "publishedDate": "1951",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "UCAL:B3457273"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 309,
+    "printType": "BOOK",
+    "categories": [
+     "Constitutional history"
+    ],
+    "averageRating": 3.5,
+    "ratingsCount": 3,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=7F5aAAAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=7F5aAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.co.in/books?id=7F5aAAAAIAAJ&q=book&dq=book&hl=&cd=2&source=gbs_api",
+    "infoLink": "http://books.google.co.in/books?id=7F5aAAAAIAAJ&dq=book&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/The_Republic_of_India.html?hl=&id=7F5aAAAAIAAJ"
+   },
+   "saleInfo": {
+    "country": "IN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "IN",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=7F5aAAAAIAAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "tEOM8hg4oPUC",
+   "etag": "hiXWfk8MImo",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/tEOM8hg4oPUC",
+   "volumeInfo": {
+    "title": "Judging a Book by Its Cover",
+    "subtitle": "Fans, Publishers, Designers, and the Marketing of Fiction",
+    "authors": [
+     "Nicole Matthews",
+     "Nickianne Moody"
+    ],
+    "publisher": "Ashgate Publishing, Ltd.",
+    "publishedDate": "2007",
+    "description": "This collection examines the role of book covers in the marketing of popular fiction across the twentieth century and beyond. Using case studies, the contributors address key themes and topics in contemporary media, literary, publishing, and business stud",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0754657310"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780754657316"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 191,
+    "printType": "BOOK",
+    "categories": [
+     "Literary Criticism"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=tEOM8hg4oPUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=tEOM8hg4oPUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.co.in/books?id=tEOM8hg4oPUC&printsec=frontcover&dq=book&hl=&cd=3&source=gbs_api",
+    "infoLink": "http://books.google.co.in/books?id=tEOM8hg4oPUC&dq=book&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Judging_a_Book_by_Its_Cover.html?hl=&id=tEOM8hg4oPUC"
+   },
+   "saleInfo": {
+    "country": "IN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "IN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=tEOM8hg4oPUC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "This collection examines the role of book covers in the marketing of popular fiction across the twentieth century and beyond."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "Y7sOAAAAIAAJ",
+   "etag": "hVNsrRaHNfc",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Y7sOAAAAIAAJ",
+   "volumeInfo": {
+    "title": "Alice's Adventures in Wonderland",
+    "authors": [
+     "Lewis Carroll"
+    ],
+    "publishedDate": "1920",
+    "description": "In the most renowned novel by English author Lewis Carroll, restless young Alice literally stumbles into adventure when she follows the hurried, time-obsessed White Rabbit down a hole and into a fantastical realm where animals are quite verbose, logic is in short supply, and royalty tends to be exceedingly unpleasant. Each playfully engaging chapter presents absurd scenarios involving an unforgettable cast of characters, including the grinning Cheshire Cat and the short-tempered Queen of Hearts, and every stop on Alice's peculiar journey is marked by sharp social satire and wondrously witty wordplay.",
+    "industryIdentifiers": [
+     {
+      "type": "OTHER",
+      "identifier": "STANFORD:36105004896523"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 200,
+    "printType": "BOOK",
+    "categories": [
+     "Children's stories"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 1680,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.4.4.0.full.3",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=Y7sOAAAAIAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=Y7sOAAAAIAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.co.in/books?id=Y7sOAAAAIAAJ&printsec=frontcover&dq=book&hl=&cd=4&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=Y7sOAAAAIAAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-Y7sOAAAAIAAJ"
+   },
+   "saleInfo": {
+    "country": "IN",
+    "saleability": "FREE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=Y7sOAAAAIAAJ&rdid=book-Y7sOAAAAIAAJ&rdot=1&source=gbs_api"
+   },
+   "accessInfo": {
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": true,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "downloadLink": "http://books.google.co.in/books/download/Alice_s_Adventures_in_Wonderland.epub?id=Y7sOAAAAIAAJ&hl=&output=epub&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "downloadLink": "http://books.google.co.in/books/download/Alice_s_Adventures_in_Wonderland.pdf?id=Y7sOAAAAIAAJ&hl=&output=pdf&sig=ACfU3U0LJuWczqOh8hN2H4-DDF1Ym-Vr7g&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=Y7sOAAAAIAAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "In the most renowned novel by English author Lewis Carroll, restless young Alice literally stumbles into adventure when she follows the hurried, time-obsessed White Rabbit down a hole and into a fantastical realm where animals are quite ..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "Z8e2mfFJa-4C",
+   "etag": "+Gtyq0XBmnw",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Z8e2mfFJa-4C",
+   "volumeInfo": {
+    "title": "The Book of the Navajo",
+    "authors": [
+     "Raymond Friday Locke"
+    ],
+    "publisher": "Holloway House Publishing",
+    "publishedDate": "2001",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0876875002"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780876875001"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 496,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=Z8e2mfFJa-4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=Z8e2mfFJa-4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.co.in/books?id=Z8e2mfFJa-4C&printsec=frontcover&dq=book&hl=&cd=5&source=gbs_api",
+    "infoLink": "http://books.google.co.in/books?id=Z8e2mfFJa-4C&dq=book&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/The_Book_of_the_Navajo.html?hl=&id=Z8e2mfFJa-4C"
+   },
+   "saleInfo": {
+    "country": "IN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "IN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=Z8e2mfFJa-4C&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "9opxcMjv4TUC",
+   "etag": "ApKhEf1OQXA",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/9opxcMjv4TUC",
+   "volumeInfo": {
+    "title": "The Coming of the Book",
+    "subtitle": "The Impact of Printing 1450-1800",
+    "authors": [
+     "Lucien Febvre",
+     "Henri-Jean Martin"
+    ],
+    "publisher": "Verso",
+    "publishedDate": "1997-01-01",
+    "description": "Books, and the printed word more generally, are aspects of modern life that are all too often taken for granted. Yet the emergence of the book was a process of immense historical importance and heralded the dawning of the epoch of modernity. In this much praised history of that process, Lucien Febvre and Henri-Jean Martin mesh together economic and technological history, sociology and anthropology, as well as the study of modes of consciousness, to root the development of the printed word in the changing social relations and ideological struggles of Western Europe.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1859841082"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781859841082"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 378,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=9opxcMjv4TUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=9opxcMjv4TUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.co.in/books?id=9opxcMjv4TUC&printsec=frontcover&dq=book&hl=&cd=6&source=gbs_api",
+    "infoLink": "http://books.google.co.in/books?id=9opxcMjv4TUC&dq=book&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/The_Coming_of_the_Book.html?hl=&id=9opxcMjv4TUC"
+   },
+   "saleInfo": {
+    "country": "IN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "IN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=9opxcMjv4TUC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "On the history of printing"
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "Z5PpkQadm5EC",
+   "etag": "5tU8GT0r5hc",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Z5PpkQadm5EC",
+   "volumeInfo": {
+    "title": "How to Read a Book",
+    "authors": [
+     "Mortimer J. Adler",
+     "Charles Van Doren"
+    ],
+    "publisher": "Simon and Schuster",
+    "publishedDate": "2011-05-10",
+    "description": "With half a million copies in print, How to Read a Book is the best and most successful guide to reading comprehension for the general reader, completely rewritten and updated with new material. Originally published in 1940, this book is a rare phenomenon, a living classic that introduces and elucidates the various levels of reading and how to achieve them—from elementary reading, through systematic skimming and inspectional reading, to speed reading. Readers will learn when and how to “judge a book by its cover,” and also how to X-ray it, read critically, and extract the author’s message from the text. Also included is instruction in the different techniques that work best for reading particular genres, such as practical books, imaginative literature, plays, poetry, history, science and mathematics, philosophy and social science works. Finally, the authors offer a recommended reading list and supply reading tests you can use measure your own progress in reading skills, comprehension, and speed.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1439144834"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781439144831"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 426,
+    "printType": "BOOK",
+    "categories": [
+     "Language Arts & Disciplines"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 57,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.17.13.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=Z5PpkQadm5EC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=Z5PpkQadm5EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.co.in/books?id=Z5PpkQadm5EC&printsec=frontcover&dq=book&hl=&cd=7&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=Z5PpkQadm5EC&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-Z5PpkQadm5EC"
+   },
+   "saleInfo": {
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 824.82,
+     "currencyCode": "INR"
+    },
+    "retailPrice": {
+     "amount": 519.64,
+     "currencyCode": "INR"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=Z5PpkQadm5EC&rdid=book-Z5PpkQadm5EC&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 8.2482E8,
+       "currencyCode": "INR"
+      },
+      "retailPrice": {
+       "amountInMicros": 5.1964E8,
+       "currencyCode": "INR"
+      }
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "IN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.co.in/books/download/How_to_Read_a_Book-sample-epub.acsm?id=Z5PpkQadm5EC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=Z5PpkQadm5EC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Originally published in 1940, this book is a rare phenomenon, a living classic that introduces and elucidates the various levels of reading and how to achieve them—from elementary reading, through systematic skimming and inspectional ..."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "t4LEfpCW_kQC",
+   "etag": "Jn52J7Fewfk",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/t4LEfpCW_kQC",
+   "volumeInfo": {
+    "title": "The Book in the Islamic World",
+    "subtitle": "The Written Word and Communication in the Middle East",
+    "authors": [
+     "George Nicholas Atiyeh"
+    ],
+    "publisher": "SUNY Press",
+    "publishedDate": "1995",
+    "description": "This book explores Muslims' conception of themselves as \"the people of the book\" and explains the multifaceted meanings of this concept. Published jointly with the Library of Congress, it is an illustrated history of the book and the written word in the Islamic world.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0791424731"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780791424735"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 305,
+    "printType": "BOOK",
+    "categories": [
+     "Antiques & Collectibles"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.0.1.0.preview.3",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=t4LEfpCW_kQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=t4LEfpCW_kQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.co.in/books?id=t4LEfpCW_kQC&printsec=frontcover&dq=book&hl=&cd=8&source=gbs_api",
+    "infoLink": "http://books.google.co.in/books?id=t4LEfpCW_kQC&dq=book&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/The_Book_in_the_Islamic_World.html?hl=&id=t4LEfpCW_kQC"
+   },
+   "saleInfo": {
+    "country": "IN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "IN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.co.in/books/download/The_Book_in_the_Islamic_World-sample-epub.acsm?id=t4LEfpCW_kQC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.co.in/books/download/The_Book_in_the_Islamic_World-sample-pdf.acsm?id=t4LEfpCW_kQC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=t4LEfpCW_kQC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "This book explores Muslims&#39; conception of themselves as &quot;the people of the book&quot; and explains the multifaceted meanings of this concept."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "8olDDwAAQBAJ",
+   "etag": "PfIFfXoAySw",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/8olDDwAAQBAJ",
+   "volumeInfo": {
+    "title": "Fire and Fury",
+    "authors": [
+     "Michael Wolff"
+    ],
+    "publisher": "Hachette UK",
+    "publishedDate": "2018-01-05",
+    "description": "SUNDAY TIMES NUMBER ONE BESTSELLER NEW YORK TIMES NUMBER ONE BESTSELLER With extraordinary access to the Trump White House, Michael Wolff tells the inside story of the most controversial presidency of our time. The first nine months of Donald Trump's term were stormy, outrageous - and absolutely mesmerising. Now, thanks to his deep access to the West Wing, bestselling author Michael Wolff tells the riveting story of how Trump launched a tenure as volatile and fiery as the man himself. In this explosive book, Wolff provides a wealth of new details about the chaos in the Oval Office. Among the revelations: - What President Trump's staff really thinks of him - What inspired Trump to claim he was wire-tapped by President Obama - Why FBI director James Comey was really fired - Why chief strategist Steve Bannon and Trump's son-in-law Jared Kushner couldn't be in the same room - Who is really directing the Trump administration's strategy in the wake of Bannon's firing - What the secret to communicating with Trump is - What the Trump administration has in common with the movie The Producers Never before has a presidency so divided the American people. Brilliantly reported and astoundingly fresh, Michael Wolff's Fire and Fury shows us how and why Donald Trump has become the king of discord and disunion.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781408711385"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1408711389"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 336,
+    "printType": "BOOK",
+    "categories": [
+     "Political Science"
+    ],
+    "averageRating": 3.5,
+    "ratingsCount": 56,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.13.11.0.preview.2",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=8olDDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=8olDDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.co.in/books?id=8olDDwAAQBAJ&printsec=frontcover&dq=book&hl=&cd=9&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=8olDDwAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-8olDDwAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 566.4,
+     "currencyCode": "INR"
+    },
+    "retailPrice": {
+     "amount": 305.86,
+     "currencyCode": "INR"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=8olDDwAAQBAJ&rdid=book-8olDDwAAQBAJ&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 5.664E8,
+       "currencyCode": "INR"
+      },
+      "retailPrice": {
+       "amountInMicros": 3.0586E8,
+       "currencyCode": "INR"
+      }
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "IN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.co.in/books/download/Fire_and_Fury-sample-epub.acsm?id=8olDDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=8olDDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "In this explosive book, Wolff provides a wealth of new details about the chaos in the Oval Office."
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "gPaJTL2ZFakC",
+   "etag": "9ON8tTdx+HE",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/gPaJTL2ZFakC",
+   "volumeInfo": {
+    "title": "The Book of Memory",
+    "subtitle": "A Study of Memory in Medieval Culture",
+    "authors": [
+     "Mary Carruthers"
+    ],
+    "publisher": "Cambridge University Press",
+    "publishedDate": "2008-05-01",
+    "description": "A fully revised and updated edition of this influential work of scholarship.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780521888202"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0521888204"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 519,
+    "printType": "BOOK",
+    "categories": [
+     "Literary Criticism"
+    ],
+    "averageRating": 1.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=gPaJTL2ZFakC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=gPaJTL2ZFakC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.co.in/books?id=gPaJTL2ZFakC&printsec=frontcover&dq=book&hl=&cd=10&source=gbs_api",
+    "infoLink": "http://books.google.co.in/books?id=gPaJTL2ZFakC&dq=book&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/The_Book_of_Memory.html?hl=&id=gPaJTL2ZFakC"
+   },
+   "saleInfo": {
+    "country": "IN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "IN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=gPaJTL2ZFakC&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "A fully revised and updated edition of this influential work of scholarship."
+   }
+  }
+ ]
+}

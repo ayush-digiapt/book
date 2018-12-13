@@ -14,11 +14,11 @@ module.exports = function(sequelize, DataTypes) {
       unique: true
     },
     title: {
-      type: DataTypes.STRING(32),
+      type: DataTypes.STRING(320),
       allowNull: false
     },
     description: {
-      type: DataTypes.STRING(1000),
+      type: DataTypes.TEXT,
       allowNull: true
     }
   }, {

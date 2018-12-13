@@ -8,11 +8,11 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true,
       autoIncrement: true
     },
-    authors: {
+    type: {
       type: DataTypes.STRING(64),
       allowNull: false
     },
-    publisher: {
+    name: {
       type: DataTypes.STRING(64),
       allowNull: false
     },

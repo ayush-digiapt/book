@@ -9,11 +9,11 @@ module.exports = function(sequelize, DataTypes) {
       autoIncrement: true
     },
     smallThumbnail: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(500),
       allowNull: false
     },
     thumbnail: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(500),
       allowNull: false
     },
     bid: {
