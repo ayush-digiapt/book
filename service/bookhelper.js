@@ -12,6 +12,76 @@ var RetailPrice = db.import('../models/retailPrice');
 var SaleInfo = db.import('../models/saleInfo');
 var User = db.import('../models/users');
 
+//HasMany
+Book.hasMany(ImageLink,{foreignKey:'bid',as:'Image' });
+Book.hasMany(ListPrice,{foreignKey:'bid',as:'list' });
+Book.hasMany(RetailPrice,{foreignKey:'bid',as:'retail' });
+Book.hasMany(SaleInfo,{foreignKey:'bid',as:'sale' });
+Book.hasMany(User,{foreignKey:'bid',as:'userdata' });
+
+exports.getResponse=async function(bid){
+    return new Promise((resolve,reject)=>{
+        console.log("REACHED HERE???")
+        Book.findAll({
+            where:{
+             id:bid
+            },include:[{
+                model:ImageLink,
+                as:'Image'
+            },{
+            
+                model:ListPrice,
+                as:'list'
+            },{
+                model:RetailPrice,
+                as:'retail'
+            },{
+                model:SaleInfo,
+                as:'sale'
+            },{
+                model:User,
+                as:'userdata'
+            }]
+        }).then(function(data){
+            let response={};
+            if(data.length>0)
+            data.map(function(u){
+               let temp={},author=[],publisher;
+                for(let i=0;i<u.userdata.length;i++){
+                   if(u.userdata[i].type=="publisher"){
+                     publisher=u.userdata[i].name;  
+                   }else{
+                    author.push(u.userdata[i].name);
+                   }
+               }
+              temp.book_id=bid;
+              temp.book_name=u.title;
+              temp.book_description=u.description;
+              temp.author=author;
+              temp.publisher=publisher;
+              temp.thumbnail=u.Image[0].thumbnail;
+              temp.saleinfo={
+                  country:u.sale[0]?(u.sale[0].country?u.sale[0].country:"NA"):"NA",
+                  saleability:u.sale[0]?(u.sale[0].saleability?u.sale[0].saleability:"NA"):"NA",
+                  isEbook:u.sale[0]?(u.sale[0].isEbook?u.sale[0].isEbook:"NA"):"NA",
+                  listPrice:{
+                    amount:u.list[0].ammount,
+                    currency_code:u.list[0].currency_code
+                },
+                retailPrice:{
+                    amount:u.retail[0].ammount,
+                    currency_code:u.retail[0].currency_code
+                }
+              }
+              response=temp;
+            })
+             resolve(response);
+        }).catch(function(err){
+            reject(err);
+        })
+    })
+}
+
 exports.callGoogleBookApi=async function(url){
     return new Promise((resolve, reject) => {
         var options = {
@@ -36,7 +106,9 @@ exports.populateData=async function(bookdata){
     var books=[],imageLinks=[],listPrice=[], retailPrice=[], saleInfo=[], users=[];
     let dbbookids=await getBookIds();
     let temp;
+    var idBook=[];
     bookdata.map(function(u){
+        idBook.push(u.id);
         if(!(dbbookids.includes(u.id))){
             /*Getting data for book table START*/
             temp={};
@@ -71,9 +143,6 @@ exports.populateData=async function(bookdata){
         listPrice.push(temp);
        /*Getting data for listPrice table END*/
        temp={};
-
-    
-
        /*Getting data for retailPrice table START*/
        if(u.saleInfo.retailPrice){
           temp.ammount=u.saleInfo.retailPrice.amount?u.saleInfo.listPrice.amount:200;
@@ -120,15 +189,11 @@ exports.populateData=async function(bookdata){
     }
    /*Getting data for users table END*/
    temp={};
-
-
        /*Getting data for saleInfo table START*/
        if(u.saleInfo){
         temp.country=u.saleInfo.country?u.saleInfo.country:"IN";
         temp.saleability=u.saleInfo.saleability?u.saleInfo.saleability:"NOT_FOR_SALE";
         temp.isEbook=u.saleInfo.isEbook?u.saleInfo.isEbook:false;
-
-
     }else{
         temp.country= "IN";
         temp.saleability="NOT_FOR_SALE ";
@@ -136,11 +201,8 @@ exports.populateData=async function(bookdata){
     }
     temp.bid=u.id;
     saleInfo.push(temp);
-
-    
    /*Getting data for saleInfo table END*/
    temp={};
-
         }
     })
     try{
@@ -151,21 +213,20 @@ exports.populateData=async function(bookdata){
             var retailPrice=updateBookId(book_ids,retailPrice);
             users=updateBookId(book_ids,users);
             var saleInfo=updateBookId(book_ids,saleInfo);
-            
             await createImageLink(imageLinks);
-
             listPrice=await CreateListPrice(listPrice);
             saleInfo=updatelId(listPrice,saleInfo);
             retailPrice=await CreateRetailPrice(retailPrice);
             saleInfo=updateRid(retailPrice,saleInfo);
             await CreateUsers(users);
            await CreateSaleInfo(saleInfo,listPrice,retailPrice);
-
-           
          }else{
              console.log("No new Bookdata Found!!")
          }
-    }catch(err){
+ /*Get the response to send to Frontend START*/
+ return await getresponse(idBook);
+/*Get the response to send to Frontend END*/
+        }catch(err){
         throw err;
     }
 }
@@ -180,6 +241,32 @@ var getBookIds = async function(){
              resolve(book_id);
             }else
                resolve([]);
+        }).catch(function(err){
+            reject(err);
+        })
+    })
+}
+
+var getresponse=async function(idBook){
+    return new Promise((resolve,reject)=>{
+        Book.findAll({
+            where:{
+             book_id:{
+                    $in:idBook
+                }
+            },include:[{
+                model:ImageLink,
+                as:'Image'
+            }]
+        }).then(function(data){
+            let response=[];
+            data.map(function(u){
+                response.push({
+                    bid:u.Image[0].bid,
+                    thumbnail:u.Image[0].thumbnail
+                })
+            })
+             resolve(response);
         }).catch(function(err){
             reject(err);
         })
@@ -294,7 +381,7 @@ var updateBookId=function(book_ids,temparray){
          })
        return temparray;
    }
-   var updatelId=function(book_ids,temparray){
+var updatelId=function(book_ids,temparray){
     temparray.map(function(u){
            book_ids.map(function(v){
                if(u.bid==v.book_id){
@@ -305,7 +392,7 @@ var updateBookId=function(book_ids,temparray){
        return temparray;
    }
 
-   var updateRid=function(book_ids,temparray){
+var updateRid=function(book_ids,temparray){
     temparray.map(function(u){
            book_ids.map(function(v){
                if(u.bid==v.book_id){
@@ -318,3 +405,110 @@ var updateBookId=function(book_ids,temparray){
 
 
 
+
+
+exports.getlistPricedetails = async function(bid) {
+
+    return new Promise((resolve,reject) => {
+        ListPrice.findOne({
+                    where: {
+                       bid:bid
+                       
+                    }
+                })
+                
+        .then(function(getlistPricedetails) {
+           
+            console.log("data is****");
+           
+            resolve(getlistPricedetails);
+        
+        }).catch(function(err) {
+            console.log("data is######");
+            
+            reject(err);
+        })
+    })
+
+}
+
+
+
+exports.getretailPriceData = async function(bid) {
+
+    return new Promise((resolve,reject) => {
+        RetailPrice.findOne({
+                    where: {
+                       bid:bid
+                       
+                    }
+                })
+                
+        .then(function(getretailPriceData) {
+           
+            console.log("data is****");
+           
+            resolve(getretailPriceData);
+        
+        }).catch(function(err) {
+            console.log("data is######");
+            
+            reject(err);
+        })
+    })
+
+}
+
+
+exports.getsaleInfo = async function(bid,lid,rid) {
+
+    return new Promise((resolve,reject) => {
+        SaleInfo.findOne({
+                    where: {
+                       bid:bid,
+                       lid:lid,
+                       rid:rid
+                       
+                    }
+                })
+                
+        .then(function(retailPriceData) {
+           
+            console.log("data is****");
+           
+            resolve(retailPriceData);
+        
+        }).catch(function(err) {
+            console.log("data is######");
+            
+            reject(err);
+        })
+    })
+
+}
+
+
+
+exports.getusersData = async function(bid,lid,rid) {
+
+    return new Promise((resolve,reject) => {
+        User.findOne({
+                    where: {
+                       bid:bid
+                    }
+                })
+                
+        .then(function(getusersData) {
+           
+            console.log("data is****");
+           
+            resolve(getusersData);
+        
+        }).catch(function(err) {
+            console.log("data is######");
+            
+            reject(err);
+        })
+    })
+
+}

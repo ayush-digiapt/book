@@ -14,6 +14,7 @@ global.lib = require('./lib');
 //var homepageRouter = require('./routes/index');
  var bookRouter = require('./routes/books.server.routes');
  var homepageRouter = require('./routes/index');
+ var mainPage= require('./routes/mainpage');
 
 // CORS Enable
 app.use(cors());
@@ -37,10 +38,8 @@ app.use(cookieParser());
 
 /*Application routes Start*/
 
-// app.use('/admin', adminRouter);
-// app.use('/team', teamRouter);
-app.use('/homepage', homepageRouter);
-//app.use('/homepage', homepageRouter);
+app.use('/', homepageRouter);
+app.use('/mainpage', mainPage);
 app.use('/book', bookRouter);
 
 
